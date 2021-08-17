@@ -1,0 +1,29 @@
+1
+2
+3
+
+
+This tutorial will help you to setup identity for the git repository on your development machine. You can configure Git username and email address for the Git repository or globally for your user. The global configuration is applied to all available repositories for that user. Git local repository configuration overwrites the global configurations.
+
+Change Username and Email for Single Repository
+Git command line utility allowed to us to configure identity for your Git repository. Git keeps all the repository specific configurations under the “.git” directory. The conflagration’s are keep under .git/config file.
+
+To configure git username and email address for the repository, first switch to the repository directory.
+
+cd ~/Applications/MyApp1
+Then configure Git username and email address with the following commands:
+
+git config user.name "Your Name"
+git config user.email "your-email-address@domain.com"
+Make sure to change name and email address with your details.
+
+Next run the following command to view the changes are properly updated to your repository:
+
+git config --list
+
+user.name=Your Name
+user.email=your-email-address@domain.com
+Setup Username & Email Globally
+The above section describes you the configuration of git username and email address for single repository. If you have multiple repository on your system and you don’t want to configure username and email address for each repository individually. You can use --global option with that commands to configure it globally, which will be available for all repositories of that system user.
+
+Run the following commands to set Git username and email address for user:
